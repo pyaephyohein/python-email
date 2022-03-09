@@ -10,13 +10,12 @@ password = os.getenv('password')
 host = os.getenv('host')
 port = os.getenv('port')
 # to = os.getenv('receiver')
-sent_from = email
+sent_from = email   
 to = ['pyaephyohein.info.3326@gmail.com', 'pyae.phyohein@outlook.com']
 subject = 'Test Email from python'
 cmd = os.system('date')
-body = str(cmd)
+body = "Hello THis is testingsss"
 print(body)
-
 print (to)
 email_text = """\
 From: %s
@@ -24,7 +23,7 @@ To: %s
 Subject: %s
 
 %s
-""" % (sent_from, ", ".join(to), subject, str(body))
+""" % (sent_from, ", ".join(to), subject, body)
 context = ssl.create_default_context()
 try:
     smtp_server = smtplib.SMTP(host, port)
